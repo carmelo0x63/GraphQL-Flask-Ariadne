@@ -6,7 +6,7 @@ CREATE TABLE todo (
 	PRIMARY KEY (id)
 );
 
-INSERT INTO todo (id, description, completed, due_date) VALUES ('1', 'Test 1', 'false', '1-1-2022');
-INSERT INTO todo (id, description, completed, due_date) VALUES ('2', 'Test 2', 'false', '31-03-2022');
-INSERT INTO todo (id, description, completed, due_date) VALUES ('3', 'Test 3', 'false', '20-10-2022');
-INSERT INTO todo (id, description, completed, due_date) VALUES ('4', 'Test 4', 'false', '31-12-2022');
+INSERT INTO todo (id, description, completed, due_date) VALUES ('1', 'Test 1', '0', '2022-01-01');
+INSERT INTO todo (id, description, completed, due_date) VALUES ('2', 'Test 2', '0', '2022-03-31');
+INSERT INTO todo (id, description, completed, due_date) VALUES ('3', 'Test 3', '0', '2022-07-15');
+INSERT INTO todo (id, description, completed, due_date) VALUES ('4', 'Test 4', '0', '2022-12-31');
