@@ -1,3 +1,5 @@
+DROP TABLE IF EXISTS todo;
+
 CREATE TABLE todo (
 	id INTEGER NOT NULL,
 	description VARCHAR,
