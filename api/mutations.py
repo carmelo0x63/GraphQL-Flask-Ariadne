@@ -8,7 +8,7 @@ def resolve_create_todo(obj, info, description, due_date):
     try:
         due_date = datetime.strptime(due_date, '%d-%m-%Y').date()
         todo = Todo(
-            description=description, due_date=due_date
+            description = description, due_date = due_date
         )
         db.session.add(todo)
         db.session.commit()
