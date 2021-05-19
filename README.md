@@ -24,3 +24,79 @@ export FLASK_APP=main && export FLASK_ENV=development
 flask run --host=0.0.0.0
 ```
 
+### Sample queries
+URL = `http://<ip_address>:5000/graphql`, **NOTE**: no *slash* after `graphql`<br/>
+Get all todos
+```
+query fetchAllTodos {
+    todos {
+        success
+        errors
+        todos {
+            id
+            description
+            completed
+            dueDate
+        }
+    }
+}
+```
+
+Get todo by ID
+```
+query fetchTodo {
+  todo(todoId: "1") {
+    success
+    errors
+    todo {
+        id
+        description
+        completed
+        dueDate
+    }
+  }
+}
+```
+
+### Sample mutations
+New todo
+```
+mutation newTodo {
+  createTodo(description: "Test 6", dueDate: "01-01-2030") {
+    success
+    errors
+    todo {
+      id
+      completed
+      description
+    }
+  }
+}
+```
+
+Mark done
+```
+mutation markDone {
+    markDone(todoId: "1") {
+      success
+      errors
+      todo {
+          id
+          completed
+          description
+          dueDate
+    }
+  }
+}
+```
+
+Delete
+```
+mutation {
+  deleteTodo(todoId: "5") {
+    success
+    errors
+  }
+}
+```
+
