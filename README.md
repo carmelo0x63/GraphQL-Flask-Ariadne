@@ -26,7 +26,8 @@ flask run --host=0.0.0.0
 
 ### Sample queries
 URL = `http://<ip_address>:5000/graphql`, **NOTE**: no *slash* after `graphql`<br/>
-Get all todos
+<br/>
+- Get all todos
 ```
 query fetchAllTodos {
     todos {
@@ -42,7 +43,7 @@ query fetchAllTodos {
 }
 ```
 
-Get todo by ID
+- Get todo by ID
 ```
 query fetchTodo {
   todo(todoId: "1") {
@@ -59,7 +60,7 @@ query fetchTodo {
 ```
 
 ### Sample mutations
-New todo
+- New todo
 ```
 mutation newTodo {
   createTodo(description: "Test 6", dueDate: "01-01-2030") {
@@ -74,7 +75,7 @@ mutation newTodo {
 }
 ```
 
-Mark done
+- Mark done
 ```
 mutation markDone {
     markDone(todoId: "1") {
@@ -90,7 +91,7 @@ mutation markDone {
 }
 ```
 
-Delete
+- Delete
 ```
 mutation {
   deleteTodo(todoId: "5") {
